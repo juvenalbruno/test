@@ -26,7 +26,7 @@ module.exports = {
         try {
             const { idade, nome, cargo } = req.body;
             const { id } = req.params;
-            await knex(funcionario)
+            await knex('funcionario')
                 .update({ idade, nome, cargo })
                 .where({ id })
             return res.json('Funcionario Atualizado!')
